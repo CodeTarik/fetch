@@ -7,6 +7,7 @@ async function fetchDataJson() {
 
 async function fetchDataText() {
     let response = await fetch('h1.txt');
-    let responseAsJson = await response.json();
-    document.getElementById("content").innerHTML = responseAsText
+    let responseAsJson = await response.text();
+    document.getElementById("content").innerHTML = responseAsText;
+    console.log(responseAsText);
 }
